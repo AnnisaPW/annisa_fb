@@ -1,7 +1,7 @@
 import 'package:annisa_fb/app/utils/functions.dart';
-import 'package:annisa_fb/ui_screens/b.products/b.product_detail/a.product_detail.data.dart';
-import 'package:annisa_fb/ui_screens/b.products/b.product_detail/b.product_detail.ctrl.dart';
-import 'package:annisa_fb/ui_screens/b.products/b.product_detail/widgets/a.product_detail.appbar.dart';
+import 'package:annisa_fb/ui_screens/c.products/b.product_detail/a.product_detail.data.dart';
+import 'package:annisa_fb/ui_screens/c.products/b.product_detail/b.product_detail.ctrl.dart';
+import 'package:annisa_fb/ui_screens/c.products/b.product_detail/widgets/a.product_detail.appbar.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailView extends StatelessWidget {

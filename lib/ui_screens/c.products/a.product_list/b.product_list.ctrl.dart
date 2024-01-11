@@ -1,6 +1,7 @@
 import 'package:annisa_fb/models/a.product.dart';
-import 'package:annisa_fb/ui_screens/b.products/a.product_list/a.product_list.data.dart';
+import 'package:annisa_fb/ui_screens/c.products/a.product_list/a.product_list.data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 Future<List<Product>> getProductList() async {
   List<Product> products = [];
@@ -22,4 +23,8 @@ loadProductList() async {
   if (result.length < 3) {
     isEndOfList = true;
   }
+}
+
+Future<void> signOut() async {
+  await FirebaseAuth.instance.signOut();
 }

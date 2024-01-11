@@ -8,5 +8,16 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  // initStreamUser();
   runApp(const App());
 }
+
+// Stream<User?> userStream = Stream.value(null);
+
+// initStreamUser() async* {
+//   userStream.listen((user) {
+//     FirebaseAuth.instance.authStateChanges().listen((event) {
+//       user = event;
+//     });
+//   });
+// }

@@ -1,7 +1,8 @@
-import 'package:annisa_fb/ui_screens/b.products/a.product_list/a.product_list.data.dart';
-import 'package:annisa_fb/ui_screens/b.products/a.product_list/b.product_list.ctrl.dart';
-import 'package:annisa_fb/ui_screens/b.products/a.product_list/widgets/a.product_list.appbar.dart';
-import 'package:annisa_fb/ui_screens/b.products/a.product_list/widgets/b.product_list.card.dart';
+import 'package:annisa_fb/ui_screens/c.products/a.product_list/a.product_list.data.dart';
+import 'package:annisa_fb/ui_screens/c.products/a.product_list/b.product_list.ctrl.dart';
+import 'package:annisa_fb/ui_screens/c.products/a.product_list/widgets/a.product_list.appbar.dart';
+import 'package:annisa_fb/ui_screens/c.products/a.product_list/widgets/b.product_list.drawer_profile.dart';
+import 'package:annisa_fb/ui_screens/c.products/a.product_list/widgets/c.product_list.card.dart';
 import 'package:flutter/material.dart';
 
 class ProductListView extends StatefulWidget {
@@ -25,6 +26,7 @@ class _ProductListViewState extends State<ProductListView> {
           preferredSize: Size.fromHeight(56),
           child: ProductListAppBar(),
         ),
+        endDrawer: const ProductListDrawerProfile(),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: FutureBuilder(

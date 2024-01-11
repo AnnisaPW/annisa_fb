@@ -1,5 +1,5 @@
 import 'package:annisa_fb/app/utils/functions.dart';
-import 'package:annisa_fb/ui_screens/b.products/b.product_detail/c.product_detail.view.dart';
+import 'package:annisa_fb/ui_screens/c.products/b.product_detail/c.product_detail.view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../models/a.product.dart';
