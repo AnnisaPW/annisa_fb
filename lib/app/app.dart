@@ -1,4 +1,4 @@
-import 'package:annisa_fb/ui_screens/home/home.view.dart';
+import 'package:annisa_fb/ui_screens/b.products/a.product_list/c.product_list.view.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -11,11 +11,11 @@ class App extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
-          brightness: Brightness.dark,
+          // brightness: Brightness.dark,
         ),
         useMaterial3: true,
       ),
-      home: const HomeView(),
+      home: const ProductListView(),
     );
   }
 }

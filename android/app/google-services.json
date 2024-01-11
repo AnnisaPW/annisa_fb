@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "282287249955",
+    "project_id": "annisa-fb",
+    "storage_bucket": "annisa-fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282287249955:android:7c34a9a565a34b454f6f96",
+        "android_client_info": {
+          "package_name": "com.example.annisa_fb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2F9vuhhv4WGV1kkCvvKh1Q2yNLXrjoNA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
