@@ -2,18 +2,61 @@ import 'package:annisa_fb/app/utils/functions.dart';
 import 'package:annisa_fb/ui_screens/c.products/b.product_detail/a.product_detail.data.dart';
 import 'package:annisa_fb/ui_screens/c.products/b.product_detail/b.product_detail.ctrl.dart';
 import 'package:annisa_fb/ui_screens/c.products/b.product_detail/widgets/a.product_detail.appbar.dart';
+import 'package:annisa_fb/ui_screens/c.products/d.product_edit/c.product_edit.view.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class ProductDetailView extends StatelessWidget {
+class ProductDetailView extends StatefulWidget {
   final String id;
   const ProductDetailView({super.key, required this.id});
 
+  @override
+  State<ProductDetailView> createState() => _ProductDetailViewState();
+}
+
+class _ProductDetailViewState extends State<ProductDetailView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(56),
         child: ProductDetailAppBar(),
+      ),
+      floatingActionButton: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            if (snapshot.data!.email == 'admin@admin.com') {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  FloatingActionButton(
+                    heroTag: null,
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    child: const Icon(Icons.refresh),
+                  ),
+                  const SizedBox(height: 5),
+                  FloatingActionButton(
+                    heroTag: null,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProductEditView(),
+                        ),
+                      );
+                    },
+                    child: const Icon(Icons.edit),
+                  ),
+                ],
+              );
+            }
+            return const SizedBox.shrink();
+          }
+          return const SizedBox.shrink();
+        },
       ),
       body: Center(
         child: Container(
@@ -22,7 +65,7 @@ class ProductDetailView extends StatelessWidget {
             child: Container(
               color: Colors.white,
               child: FutureBuilder(
-                future: getProductDetail(id),
+                future: getProductDetail(widget.id),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     if (productDetail != null) {

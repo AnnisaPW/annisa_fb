@@ -28,3 +28,10 @@ loadProductList() async {
 Future<void> signOut() async {
   await FirebaseAuth.instance.signOut();
 }
+
+refreshProducts() {
+  productList = [];
+  isEndOfList = false;
+  selectedId = '';
+  loadProductList();
+}

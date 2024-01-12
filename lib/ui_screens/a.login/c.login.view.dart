@@ -21,7 +21,8 @@ class LoginView extends StatelessWidget {
                   controller: emailLoginCtrl,
                   decoration: InputDecoration(
                     labelText: 'Email',
-                    hintText: 'Input your email',
+                    hintText: 'admin@admin.com',
+                    alignLabelWithHint: true,
                     prefixIcon: Icon(
                       Icons.email,
                       color: Colors.black54.withOpacity(0.5),
@@ -43,7 +44,8 @@ class LoginView extends StatelessWidget {
                   controller: passwordLoginCtrl,
                   decoration: InputDecoration(
                     labelText: 'Password',
-                    hintText: 'Input your password',
+                    alignLabelWithHint: true,
+                    hintText: 'secret12',
                     prefixIcon: Icon(
                       Icons.lock,
                       color: Colors.black54.withOpacity(0.5),
